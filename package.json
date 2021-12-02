@@ -1,0 +1,91 @@
+{
+  "name": "generator-standard",
+  "version": "1.0.0",
+  "description": "Generates MCDS-STANDARD applications and pipelines.",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "mocha"
+  },
+  "homepage": "mcds-content-containers/generator-standard",
+  "author": "Naveen Pariath <npariath@in.ibm.com>",
+  "main": "generators/index.js",
+  "keywords": [
+    "standard",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-security": "^1.4.0",
+    "fs-extra": "^8.1.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^9.2.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.18.2",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "gitconfiglocal": "^2.1.0",
+    "github-api": "^3.3.0",
+    "latest-version": "^5.1.0",
+    "line-reader": "^0.4.0",
+    "maven": "^4.7.0",
+    "rimraf": "^3.0.0",
+    "semver": "^7.3.2",
+    "simple-git": "2.4.0",
+    "url": "^0.11.0",
+    "xml2js": "^0.4.23",
+    "yeoman-generator": "^2.0.1",
+    "yeoman-option-or-prompt": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "mocha": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:mcds-content-containers/generator-standard.git"
+  },
+  "publishConfig": {
+    "registry": "https://na.artifactory.swg-devops.com/artifactory/api/npm/mss-npm"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
+}
